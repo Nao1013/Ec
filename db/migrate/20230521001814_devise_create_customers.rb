@@ -26,13 +26,22 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       # t.datetime :confirmed_at
       # t.datetime :confirmation_sent_at
       # t.string   :unconfirmed_email # Only if using reconfirmable
+      t.string :first_name, null: false
+      t.string :last_name, null: false
+      t.string :first_name_kana, null: false
+      t.string :last_name_kana, null: false
+      t.string :post_code, null: false
+      t.string :address1, null: false
+      t.string :address2, null: false
+      t.string :address3, null: false
+      t.boolean :is_deleted, null: false, default: false
 
       ## Lockable
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
-
-
+      
+      
       t.timestamps null: false
     end
 
