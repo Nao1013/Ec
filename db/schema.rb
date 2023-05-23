@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2023_05_21_012256) do
     t.string "name", null: false
     t.text "introduct", null: false
     t.integer "no_tax", null: false
-    t.string "is_status", default: "t", null: false
+    t.boolean "is_status", default: true, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

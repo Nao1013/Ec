@@ -1,13 +1,13 @@
 <header>
-  <nav class="navbar navbar-expand" style="background-color: sandybrown;">
+  <nav class="navbar navbar-expand navbar-dark" style="background-color: sandybrown;">
     <div class="container">
-      <%#= link_to image_tag('logo.png', width: '50%', height: '50%'), root_path %>
+      <a class="navbar-brand" href="/"><h3>Nagano-Cake</h3></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <!--ログイン後表示-->
+          <!--顧客側ログイン後後表示-->
           <% if customer_signed_in? %>
             <%= link_to "ログアウト", destroy_customer_session_path, method: :delete, class: "btn btn-light" %>
 
