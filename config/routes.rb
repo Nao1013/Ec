@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   
   # 管理者側
   namespace :admin do
-    resources :products, only: [:index, :create, :show, :edit, :update]
+    resources :products, only: [:index, :new, :create, :show, :edit, :update]
   end
   
   # devise_for :admins
